@@ -1,0 +1,40 @@
+@media all and (max-width: 1000px) {
+  main {
+    display: block;
+    text-align: center;
+    height: 100%;
+}
+
+.header{
+ width: auto;
+ height: auto;
+ text-align: center;
+}
+
+.logo{
+  text-align: center;
+}
+
+.container{
+  display: block;
+  text-align:justify;
+}
+
+.content-about-us{
+  display: block;
+}
+
+.content-aside p{
+  text-align: center;
+}
+
+.Product{
+  width: 100%;
+}
+
+.Product p{
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+}
