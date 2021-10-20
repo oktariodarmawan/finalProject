@@ -1,0 +1,560 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+
+*{
+    font-family: 'Poppins' sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s linear;
+    text-decoration: none;
+}
+
+
+.logo{
+    width: 100px;
+    float: left;
+    padding-left: 50px;
+    padding-top: 20px;
+    font-style: italic;
+    font-family: 'Poppins' sans-serif;
+}
+
+.red-logo{
+  color: orange;
+}
+
+.white-logo{
+  color: orange;
+}
+
+.navbar{
+    display:flex;
+    float:right;
+    text-align: center;
+    
+}
+
+ .navbar a{
+    display: inline-block;
+    margin: 20px 20px;
+    padding: 20px 40px;
+    font-family: 'Poppins' sans-serif;
+    color: orange;
+}
+
+.navbar a:hover{
+  background-color: red;
+}
+
+
+.login-btn{
+  background-color: red;
+  cursor: pointer;
+}
+
+
+header{
+ height: 150px;
+ border-bottom: 1px solid black;
+ background-image: url(image/mixed-sushi-set.jpg);
+ background-size: cover;
+ position: sticky;
+ position: -webkit-sticky;
+ top: 0;
+ z-index: 1;
+ background-color: white;
+}
+
+
+/*About Us*/
+
+.container{
+  margin-bottom: 100px;
+}
+.content-message{
+  text-align: center;
+  padding-top: 70px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: orange;
+}
+
+.content-about-us{
+ width: 80%;
+ margin:auto;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
+
+.content-message{
+  margin-bottom: 10px;
+}
+.content-aside{
+  width: 40%;
+  margin-left: 50px;
+  padding: 100px;
+}
+.container img{
+  width: 400px;
+  padding-top: 30px;
+}
+
+
+
+/*MODAL!*/
+#myModal {
+  display: none; /* Tersembunyi secara default */
+  position: fixed; /* Agar selalu berada di tempat tersebut */
+  z-index: 1; /* Agar berada di paling depan */
+  padding-top: 100px; /* Agar memiliki jarak dari atas halaman */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+/* Tombol keluar */
+#closeModal {
+  color: #aaaaaa;
+  float: right;
+}
+
+#closeModal:hover,
+#closeModal:focus {
+  color: #000;
+  cursor: pointer;
+}
+
+.sign-up-container{
+  text-align: center;
+}
+input{
+  display:block;
+  margin: auto;
+}
+
+
+#modalContent{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.center h1{
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.pass:hover{
+  text-decoration: underline;
+}
+input[type="submit"]{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover{
+  border-color: #2691d9;
+  transition: .5s;
+}
+.signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.signup_link a{
+  color: #2691d9;
+  text-decoration: none;
+}
+.signup_link a:hover{
+  text-decoration: underline;
+}
+
+/*product-wrapper */
+
+.product-wrapper{
+  text-align: center;
+}
+
+.heading h2{
+  padding:70px 0;
+  color: orange;
+}
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  margin-left:200px;
+  margin-right: 200px;
+  justify-content: space-between;
+}
+
+.Product{
+  width: 50%;
+  margin-bottom: 100px;
+}
+
+.Product img{
+  height: 200px;
+  width: 200px;
+}
+
+.btn {
+  padding: 12px 24px;
+  margin: 10px 200px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+  background-color: orangered;
+  cursor: pointer;
+}
+
+.btn:hover{
+  opacity: 1;
+}
+
+/*HOME*/
+.home{
+  height: 500px;
+  background-image: url(image/2.jpg);
+  background-size: cover;
+  padding-top:90px;
+  padding-bottom:100px;
+  text-align: center;
+}
+
+.home-container{
+  width: 900px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  color:red;
+}
+
+.home-container h2{
+  opacity:0.7;
+  font-size:45px;
+  letter-spacing:5px;
+  margin-bottom:10px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.home-container h3{
+  opacity:0.7;
+  font-size:30px;
+  letter-spacing:5px;
+  margin-bottom:10px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+}
+
+.caption{
+  width: 24em;
+    margin: 0 auto;
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Home - Typing Animation */
+.anim-typewriter{
+  animation: typewriter 5s steps(44) 1s 2 normal both, blinkTextCursor 100ms steps(44) infinite normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typewriter{
+  from{width: 0;} to{width: 24em;}
+}
+
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);} to{border-right-color: transparent;}
+}
+
+/*footer*/
+
+footer {
+  padding-top: 10px;
+  padding-bottom: 100px;
+  background-color: #eee;
+}
+
+.footer-right{
+  float: right;
+}
+
+.footer-right ul{
+  padding:20px 100px;
+  list-style-type: none;
+}
+.fa {
+  margin-right: 5px;
+}
+
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+}
+
+.twitter {
+  background-color: #55acee;
+}
+/*banner*/
+
+.banner{
+  position: relative;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.banner img{
+ width: 400px;
+}
+
+.title{
+  position: absolute;
+  top:160px;
+  left: 600px;
+  background-color:red;
+  color: orange;
+}
+
+.paragraf{
+  font-size: 28px;
+  color: orange;
+  position: absolute;
+  top:100px;
+  left: 580px;
+  font-family: monospace;
+}
+
+
+/*slideshow*/
+
+body {
+  margin: 0;
+}
+
+.mySlides {
+  display: none; /* Tersembunyi secara default */
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+  height: 300px;
+  object-fit:cover;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Meletakkan tombol next ke sebelah kanan */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Animasi */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/*review*/
+
+.heading{
+  text-align: center;
+  padding-top: 70px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: orange;
+}
+
+
+.reviews{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.review{
+  width: 30%;
+  margin: 20px 30px;
+  border:1px solid black;
+  background-color:#eee;
+}
+.review img{
+  width: 400px;
+  margin: 0 25px;
+}
+
+.review h2{
+  margin: 20px;
+  text-align: center;
+}
+
+
+.review-text{
+  
+  margin: 10px 10px;
+  color: orange;
+}
+
+
+/*Product Modal*/
+/* Modal (background) */
+#productModal {
+  display: none; /* Tersembunyi secara default */
+  position: fixed; /* Agar selalu berada di tempat tersebut */
+  z-index: 1; /* Agar berada di paling depan */
+  padding-top: 100px; /* Agar memiliki jarak dari atas halaman */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Konten Modal */
+#modalProduct {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Tombol keluar */
+#closeProduct {
+  color: #aaaaaa;
+  float: right;
+}
+
+#closeProduct:hover,
+#closeProduct:focus {
+  color: #000;
+  cursor: pointer;
+}
